@@ -26,7 +26,7 @@ export class SnapshotMirror {
         const newProps = currentProps.filter(prop => !this._currentProps.includes(prop));
 
         if (newProps.length > 0) {
-            const res = await axios.get("https://ipfs.io/ipfs/" + newProps[0]).catch(err => {
+            const res = await axios.get("https://cloudflare-ipfs.com/ipfs/" + newProps[0]).catch(err => {
                 console.error(err);
                 throw err;
             });
